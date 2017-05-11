@@ -137,13 +137,13 @@ a {
 }
 
 .bg {
-  height: 131%;
+  vertical-align: bottom;
+  height: 130%;
   overflow: hidden;
   position: absolute;
   margin-left: 60px;
-  width: 88%;
+  width: 100%;
 }
-
 
 .footbar {
   display: block;
