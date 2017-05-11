@@ -1,0 +1,158 @@
+//Fonts
+@import  url('http://fonts.googleapis.com/earlyaccess/cwtexhei.css')
+@import  url('https://fonts.googleapis.com/css?family=Montserrat')
+
+@mixin size($w,$h)
+  width: $w
+  height: $h
+
+$m_color: #2828FF
+$bg_color: #DCDCDC
+$t_color: #2828FF
+$t_color_s: #48C0A3
+$t_color_e: #ff3232
+$white: #FFFCEC
+//(1:1.66667)
+$c_width: 333px
+$c_height: 200px
+$border: 7px
+$border_b: 5px
+$title: "頭銜"
+$img: url('http://imgur.com/OT3BNWf')
+
+*
+  // border: solid 1px
+  font-weight: 200
+  letter-spacing: 0.5px
+  color: $t_color 
+  font-family: 'Montserrat','cwTeXHei', 微軟正黑體
+
+body
+  background-color: white
+  padding: 0px
+  margin: 0px
+  box-sizing: border-box
+  border-top: dashed $border_b $white 
+  border-bottom: dashed $border_b $m_color 
+
+body,html
+  width: 100%
+  height: 100%
+  position: center
+  margin: 0px auto
+.name
+  font-weight: 800
+  font-size: 28px
+  margin-bottom: 30px
+.title
+  padding-top: 30px
+  margin-bottom: -20px
+  & :hover
+    content: $title
+  
+.name_eng
+  margin-left: 10px
+  font-size: 16px
+  color: $t_color_s
+.carte
+  background-color: #FFFCEC
+  width: $c_width
+  height: $c_height
+  margin: auto
+  cursor: pointer
+  box-shadow: 10px 5px 50px rgba(255,255,255,0.4),10px 10px 30px rgba(50,50,50,0.3)
+  border: solid 1px rgba(0,0,0,0.05)
+  padding: 20px 10px 10px 20px
+  margin-top: 120px
+  border-radius: 3px
+  transition-duration: 0.7s
+  overflow: hidden
+  position: relative
+  transform-origin: 50% 50%
+  
+  &:hover
+    transform: translateY(5px) translateX(5px)
+    box-shadow: 5px 5px 5px rgba(50,50,50,0.3)
+    moz-transform-origin: right bottom
+    -moz-transform: rotate(0.5deg)
+    -webkit-transform-origin: right bottom
+    -webkit-transform: rotate(0.5deg)
+    -o-transform-origin: right bottom
+    -o-transform: rotate(0.5deg)
+    -ms-transform-origin: right bottom
+    -ms-transform: rotate(0.5deg)
+    transform-origin: right bottom
+    transform: rotate(0.5deg)
+    & .circle1
+      transform-origin: 50% 50%
+      transform: scale(0.8)
+    & .circle2
+      transform-origin: 50% 50%
+      transform: scale(1.5)  
+
+  & h4,h5
+    color: $t_color_s
+    line-height: 16px
+    margin-top: -20px
+    
+  & p
+    font-size: 12px
+    line-height: 16px
+    margin-top: -10px
+
+a
+  text-decoration: none
+  display: block
+  border-style: none
+  border-top-style: solid #ff3232 2px
+  
+.circle1
+  +size(100px,100px)
+  position: absolute
+  left: 200px
+  background-color: $m_color
+  border-radius: 100%
+  transition-duration: 1s
+  
+.circle2
+  +size(60px,60px)
+  position: absolute
+  left: initial
+  right: -35px
+  top: -35px
+  background-color: initial
+  border: solid 3px $m_color
+  border-radius: 100%
+  transition-duration: 1s
+  
+.circleA
+  width: 100%
+  height: 100%
+  position: absolute
+  background-color: #DCDCDC
+  border-radius: 0%
+  transition-duration: 1s
+  
+  &:hover
+    transform-origin: 50% 50%
+    transform: scale(0.1)
+.bg
+  height: 131%
+  overflow: hidden
+  & .me
+  position: absolute
+  margin-top: -170px
+  margin-left: 60px
+  width: 88%
+.footbar
+  display: block
+  background-color: rgba(255,255,255,0.6)
+  padding: 0px 10px 20px 10px
+  border-radius: 10px
+  position: fixed
+  bottom: -6%
+  & .h6
+  color: $m_color
+  text-align: center
+  
+  
